@@ -1,11 +1,8 @@
-FROM ubuntu
-
-RUN apt update && apt upgrade -y
-RUN apt install python
+FROM python:3.11
 
 WORKDIR /usr/app
 COPY requirements.txt ./
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./src ./src
 COPY ./config.json ./config.json
