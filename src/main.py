@@ -10,13 +10,13 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message, CallbackQuery
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
-from config import BOT_TOKEN, AAIO_MERCHANT_ID, AAIO_SECRET_KEY, AAIO_TOKEN
+from config import config
 
-bot = Bot(BOT_TOKEN, parse_mode=ParseMode.HTML)
+bot = Bot(config['token'], parse_mode=ParseMode.HTML)
 dp = Dispatcher()
 router = Router()
 dp.include_router(router)
-aaio = AAIO(AAIO_MERCHANT_ID, AAIO_SECRET_KEY, AAIO_TOKEN)
+aaio = AAIO(config['merchant_id'], config['secret'], config['key'])
 
 
 async def main():

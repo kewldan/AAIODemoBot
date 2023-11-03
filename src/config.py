@@ -1,4 +1,4 @@
-BOT_TOKEN = '6849007526:AAF3KV_2KGnuWnvbJ8wiEV1AKOmVGksHA_c'
-AAIO_MERCHANT_ID = 'fe4075a3-9f8c-4793-992e-7484965cee49'
-AAIO_SECRET_KEY = '2e48aea549a059ba2232e61e0bae0ec5'
-AAIO_TOKEN = 'ZjMwZGVjZmYtYTM0MC00NzFjLTljNWMtYzFmYzc0MGM1NjM1OnpVdig4eWp3R1V4dmhmSVQxM2lwanJfX1AxTE5jTmRT'
+import json
+
+with open('config.json', 'r', encoding='utf-8') as f:
+    config = json.load(f)
