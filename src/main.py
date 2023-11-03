@@ -37,7 +37,10 @@ async def on_start_command(message: Message):
 
     builder.button(text='💵 Создать платёж', callback_data='create_payment')
 
-    await message.answer('👋 Привет, этот бот демонстрирует возможности библиотеки AAIO для Python!',
+    await message.answer('👋 Привет, этот бот демонстрирует возможности библиотеки AAIO для Python!\n'
+                         '\n'
+                         'Исходный код бота: https://github.com/kewldan/AAIODemoBot\n'
+                         'Библиотека: https://kewldan.vercel.app/projects/aaio',
                          reply_markup=builder.as_markup())
 
 
