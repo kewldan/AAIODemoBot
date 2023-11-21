@@ -21,13 +21,6 @@ aaio = AAIO(config['merchant_id'], config['secret'], config['key'])
 
 async def main():
     logging.basicConfig(level=logging.DEBUG)
-
-    balance = await aaio.get_balances()
-    print('Балансы:', balance)
-
-    ips = await aaio.get_ips()
-    print('IP адреса AAIO:', ips)
-
     await dp.start_polling(bot)
 
 
