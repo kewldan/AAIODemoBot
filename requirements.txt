@@ -1,3 +1,2 @@
 aaio~=1.2.1
-aiogram~=3.1.1
 aiogram~=3.2.0
